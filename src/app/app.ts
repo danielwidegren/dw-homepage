@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Music } from './music';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,14 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('dw-homepage');
+  // protected readonly title = signal('dw-homepage');
+
+  constructor(private musicService: Music) {}
+
+  ngOnInit(): void {
+    this.musicService.getData().subscribe({
+      next: (res) => console.log('music data', res),
+      error: (err) => console.error(err),
+    });
+  }
 }
