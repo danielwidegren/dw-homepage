@@ -10,13 +10,13 @@ import { Music } from './music';
 })
 export class App {
   // protected readonly title = signal('dw-homepage');
-
+  protected audioPath = 'http://localhost:5299/weatherforecast';
   constructor(private musicService: Music) {}
 
   ngOnInit(): void {
-    this.musicService.getData().subscribe({
-      next: (res) => console.log('music data', res),
-      error: (err) => console.error(err),
-    });
+    // this.musicService.getData().subscribe({
+    //   next: (res) => console.log('music data', res),
+    //   error: (err) => console.error(err),
+    // });
   }
 }
