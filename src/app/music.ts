@@ -11,6 +11,6 @@ export class Music {
   constructor(private http: HttpClient) {}
 
   getData(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/weatherforecast`);
+    return this.http.get(`${this.baseUrl}/songs`);
   }
 }
