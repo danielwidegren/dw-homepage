@@ -1,9 +1,15 @@
 <main class="main">
-  <div class="content">
-    Daniel Widegren
-    <audio controls [src]="audioPath">
-      Your browser does not support the audio element.
-    </audio>
+  <div class="header-bar">
+    <span class="title">Daniel Widegren</span>
+  </div>
+  <div class="main-container">
+    <div class="playlist-panel">
+      <div class="playlist-title">Playlist</div>
+      <audio controls [src]="audioPath">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="main-panel"></div>
   </div>
 </main>
 

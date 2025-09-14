@@ -1,0 +1,41 @@
+.main {
+    margin: 0 8px;
+}
+
+.header-bar {
+    display: flex;
+    height: 42px;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.main-container {
+    height: calc(100vh - 72px);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+}
+
+.playlist-panel {
+    background-color: #121212;
+    flex: 1;
+    margin-right: 8px;
+    padding: 16px;
+}
+
+.playlist-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+}
+
+.main-panel {
+    background-color: #121212;
+    flex: 3;
+    margin-right: 8px;
+}
