@@ -6,19 +6,23 @@
     <div class="playlist-panel">
       <div class="playlist-title">Playlist</div>
       @if (audioPath()) {
-        <audio controls [src]="audioPath()">
+        <audio #audioPlayer controls [src]="audioPath()" (ended)="songEnded()">
           Your browser does not support the audio element.
         </audio>
+      }
+      @for (song of playlist(); track $index) {
+        <div><button>Play</button>{{ song.name }}</div>
       }
     </div>
     <div class="main-panel">
        @for (release of releases(); track $index) {
         <div class="release-panel">
+          <button (click)="playRelease(release)">Play release</button>
           <div>{{ release.name }}</div>
           <div>{{ release.artist }}</div>
           @for (song of release.songs; track $index) {
             <div>{{ song.name }}</div>
-            <button (click)="play(song)">Play</button>
+            <button (click)="playSong(song)">Play</button>
           } 
         </div>
        }
